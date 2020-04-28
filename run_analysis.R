@@ -41,7 +41,7 @@ both$activity <- activitylabel$V2[match(both$activity, activitylabel$V1)]
 tidy <- group_by(both, activity, subject)
 tidy <- summarize_all(tidy, .funs = mean)
 
-write.table(tidy, file = "tidydata.txt")
+write.table(tidy, file = "tidydata.txt", row.names = FALSE)
 
 
 
